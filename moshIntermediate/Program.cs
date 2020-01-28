@@ -6,19 +6,53 @@ using System.Threading.Tasks;
 
 namespace moshIntermediate
 {
+    public class Calculator
+    {
+        public int Add(params int[] numbers)
+        {
+            var sum = 0;
+            foreach(var number in numbers)
+            {
+                sum += number;
+            }
+            return sum;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            var customer = new Customer();
-            customer.Id = 1;
-            customer.Name = "John";
+            //int.Parse("abc");
+            int number;
+            var result = int.TryParse("Abc", out number);
+            if(result)
+                Console.WriteLine(number);
+            else
+                Console.WriteLine("Conversion Failed");
+        }
 
-            var order = new Order();
-            customer.Orders.Add(order);
+        static void useParams()
+        {
+            var calculator = new Calculator();
+            Console.WriteLine(calculator.Add(1, 2, 3, 4, 5));
+        }
 
-            Console.WriteLine(customer.Id);
-            Console.WriteLine(customer.Name);
+        static void usePoints()
+        {
+            try
+            {
+                var point = new Point(10, 20);
+                Console.WriteLine("Original Point {0}, {1}: ", point.X, point.Y);
+                point.Move(null);
+                Console.WriteLine("Point is at {0}, {1}", point.X, point.Y);
+
+                point.Move(100, 200);
+                Console.WriteLine("Point moved to {0}, {1}", point.X, point.Y);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("an unexpected occured");
+            }
         }
     }
 }
