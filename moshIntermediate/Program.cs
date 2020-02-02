@@ -15,8 +15,8 @@ namespace moshIntermediate
             {
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
-                stopwatch.Stop();
                 Stopwatch.now = DateTime.Now;
+                stopwatch.Stop();  
             };
 
         }

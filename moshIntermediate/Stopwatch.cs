@@ -11,14 +11,13 @@ namespace moshIntermediate
         public static DateTime now = DateTime.Now;
 
         public void Start()
-        {   
+        { 
             Console.WriteLine("Hit Enter to start stopwatch: ");
             Console.ReadLine();
             
             String hourMinuteSec = now.ToString("HH:mm:ss");
 
-            Console.WriteLine(hourMinuteSec);
-            
+            Console.WriteLine(hourMinuteSec);   
         }
         public void Stop()
         {
