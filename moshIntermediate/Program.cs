@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace moshIntermediate
 {
@@ -10,15 +11,14 @@ namespace moshIntermediate
     {
         static void Main(string[] args)
         {
-            var customer = new Customer();
-            customer.Id = 1;
-            customer.Name = "John";
+            while (true)
+            {
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
+                stopwatch.Stop();
+                Stopwatch.now = DateTime.Now;
+            };
 
-            var order = new Order();
-            customer.Orders.Add(order);
-
-            Console.WriteLine(customer.Id);
-            Console.WriteLine(customer.Name);
         }
     }
 }
