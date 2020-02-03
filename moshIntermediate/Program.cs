@@ -11,8 +11,9 @@ namespace moshIntermediate
     {
         static void Main(string[] args)
         {
+            // utilized getters
             Post post = new Post("CSharp Fundamentals", "Learn Csharp", DateTime.Now);
-            Console.WriteLine(post._title + " " + post._description + " " + post._dayAndTime);
+            Console.WriteLine(post.Title + " " + post.Description + " " + post.DayAndTime);
             post.UpVote();
             post.UpVote();
             post.UpVote();

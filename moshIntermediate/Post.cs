@@ -8,11 +8,15 @@ namespace moshIntermediate
 {
     public class Post
     {
-        public string _title;
-        public string _description;
-        public DateTime _dayAndTime;
+        private string _title;
+        private string _description;
+        private DateTime _dayAndTime;
 
         private int _vote = 0;
+
+        public string Title { get { return _title; } }
+        public string Description { get { return _description; } }
+        public DateTime DayAndTime { get { return _dayAndTime; } }
 
         public Post(string aTitle, string aDescription, DateTime aDayAndTime)
         {
