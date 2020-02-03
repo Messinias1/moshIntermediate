@@ -11,14 +11,13 @@ namespace moshIntermediate
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
-                Stopwatch stopwatch = new Stopwatch();
-                stopwatch.Start();
-                Stopwatch.now = DateTime.Now;
-                stopwatch.Stop();  
-            };
-
+            Post post = new Post("CSharp Fundamentals", "Learn Csharp", DateTime.Now);
+            Console.WriteLine(post._title + " " + post._description + " " + post._dayAndTime);
+            post.UpVote();
+            post.UpVote();
+            post.UpVote();
+            post.DownVote();
+            Console.WriteLine("Total Votes: " + post.DisplayVotes());
         }
     }
 }
