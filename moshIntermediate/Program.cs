@@ -10,11 +10,13 @@ namespace moshIntermediate
     {
         static void Main(string[] args)
         {
-            // Simple Inheritance
+            var dbMigrator = new DbMigrator(new Logger());
 
-            var text = new Text();
-            text.Width = 100;
-            text.Copy();
+            var logger = new Logger();
+            var installer = new Installer(logger);
+
+            dbMigrator.Migrate();
+            installer.Install();
         }
     }
 }
