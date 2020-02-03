@@ -10,6 +10,8 @@ namespace moshIntermediate
     {
         static void Main(string[] args)
         {
+            // Simple Inheritance
+
             var text = new Text();
             text.Width = 100;
             text.Copy();
