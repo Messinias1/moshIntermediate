@@ -13,14 +13,15 @@ namespace moshIntermediate
     {
         static void Main(string[] args)
         {
-            // upcasting and downcasting
-            //StreamReader reader = new StreamReader(new MemoryStream());
             var list = new ArrayList();
             list.Add(1);
             list.Add("Carl");
-            list.Add(new Text());
+            list.Add(DateTime.Today);
 
-            var anotherList = new List<Shape>();
+            var anotherList = new List<int>();
+            var names = new List<string>();
+            names.Add("Bob");
+
         }
     }
 }
