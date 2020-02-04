@@ -13,6 +13,7 @@ namespace moshIntermediate
     {
         static void Main(string[] args)
         {
+            // upcasting and downcasting
             //StreamReader reader = new StreamReader(new MemoryStream());
             var list = new ArrayList();
             list.Add(1);
