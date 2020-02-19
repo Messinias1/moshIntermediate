@@ -10,6 +10,7 @@ namespace moshIntermediate
     {
         static void Main(string[] args)
         {
+            // starting interface exercise
             var text = new Text();
             text.Width = 100;
             text.Copy();
